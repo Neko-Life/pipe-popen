@@ -25,7 +25,7 @@ main ()
     // fixed length buffer works just fine and secure
     char buf[BUFFER_SIZE];
     // make sure to clean all the garbage in `buf`
-    memset(buf, '\0', BUFFER_SIZE);
+    memset(buf, '\0', sizeof(buf) / sizeof(buf[0]));
 
     /**
      * The popen function run command in specified mode like
